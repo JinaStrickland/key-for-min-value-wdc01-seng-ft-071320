@@ -14,10 +14,9 @@
 # end
 
 
-
 def key_for_min_value(name_hash)
   lowest_k = nil
-  lowest_v = Float::INFINITY
+  lowest_v = 0
   name_hash.each do |k, v|
     if v < lowest_v
       lowest_v = v
@@ -28,7 +27,6 @@ def key_for_min_value(name_hash)
 end
 
 
-#
 # def select_winner(passengers)
 # winner = ""
 # passengers.each do | suite, name |
