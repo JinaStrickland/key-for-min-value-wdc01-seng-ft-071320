@@ -5,10 +5,11 @@
 def key_for_min_value(name_hash)
   max_num = name_hash[key][0]
     name_hash.each_value do | key, value |
-      if name_hash[key][value] < max_num
+      if max_num < name_hash[key][value]
         max_num = name_hash[key][value]
-
-  return name_hash[key]
+        return name_hash[key]
+      end
+    end
 end
 
 
