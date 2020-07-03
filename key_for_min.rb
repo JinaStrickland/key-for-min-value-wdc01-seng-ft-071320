@@ -15,16 +15,16 @@
 
 
 
-def key_for_min_value(hash)
-  lowest_key = nil
-  lowest_value = Float::INFINITY
+def key_for_min_value(name_hash)
+  lowest_k = nil
+  lowest_v = Float::INFINITY
   hash.each do |k, v|
-    if v < lowest_value
-      lowest_value = v
-      lowest_key = k
+    if v < lowest_v
+      lowest_v = v
+      lowest_k = k
     end
   end
-  lowest_key
+  lowest_k
 end
 
 
