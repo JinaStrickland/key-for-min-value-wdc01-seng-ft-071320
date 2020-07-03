@@ -3,10 +3,10 @@
 # Given a hash with numeric values, return the key for the smallest value
 
 def key_for_min_value(name_hash)
-  max_num = name_hash[k][0]
+  high_num = name_hash[k][0]
     name_hash.each_value do | k, v |
-      if max_num < name_hash[k][v]
-        max_num = name_hash[k][v]
+      if high_num < name_hash[k][v]
+        high_num = name_hash[k][v]
         return name_hash[k]
       end
     end
