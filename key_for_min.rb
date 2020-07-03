@@ -10,15 +10,22 @@ def key_for_min_value(name_hash)
 end
 
 
-
+def select_winner(passengers)
+winner = ""
+passengers.each do | suite, name |
+  if suite == :suite_a && name.start_with?("A")
+    winner = name
+  end
+end
+winner
+end
 
 
 def find_valid_calls(planeteer_calls)
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
   planeteer_calls.select { |calls| valid_calls.include?(calls) }[0]
 end
-  # Use an Enumerable to check if any elements in the passed in array match the valid calls listed above
-  # Return the first valid call found, or return nil if no valid calls are found
+
 
   def find_min_in_nested_arrays(src)
   low_temp_src = []
